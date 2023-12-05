@@ -1,5 +1,5 @@
 
-package fr.michaelvilleneuve.customcrop;
+package com.michaelvilleneuve.customcrop;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -15,7 +15,7 @@ public class RNCustomCropPackage implements ReactPackage {
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
       return Arrays.<NativeModule>asList(new RNCustomCropModule(reactContext));
     }
-    
+
     public List<Class<? extends JavaScriptModule>> createJSModules() {
       return Collections.emptyList();
     }
