@@ -13,6 +13,7 @@ import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.WritableMap;
+import com.facebook.react.module.annotations.ReactModule;
 
 import org.opencv.android.Utils;
 import org.opencv.core.Core;
@@ -41,8 +42,10 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
+@ReactModule(name = RNCustomCropModule.MODULE_NAME)
 public class RNCustomCropModule extends ReactContextBaseJavaModule {
 
+  public static final String MODULE_NAME = "CustomCropManager";
   private final ReactApplicationContext reactContext;
 
   public RNCustomCropModule(ReactApplicationContext reactContext) {
@@ -52,7 +55,7 @@ public class RNCustomCropModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "CustomCropManager";
+    return MODULE_NAME;
   }
 
   @ReactMethod
